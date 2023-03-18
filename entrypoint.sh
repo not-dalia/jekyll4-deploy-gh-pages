@@ -10,7 +10,7 @@ BUNDLE_BUILD__SASSC=--disable-march-tune-native
 echo "Installing gems..."
 
 apt-get update
-apt-get install build-essential pkg-config libxml2-dev libxslt-dev
+apt-get install -y build-essential pkg-config libxml2-dev libxslt-dev
 bundle config path vendor/bundle
 bundle install --jobs 4 --retry 3
 
