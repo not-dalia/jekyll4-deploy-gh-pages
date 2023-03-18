@@ -9,9 +9,9 @@ BUNDLE_BUILD__SASSC=--disable-march-tune-native
 
 echo "Installing gems..."
 
-apt-get update
-apt-get install -y build-essential pkg-config libxml2-dev libxslt-dev
+apt-get install pkg-config libxml2-dev libxslt-dev
 bundle config path vendor/bundle
+bundle config build.nokogiri "--use-system-libraries"
 bundle install --jobs 4 --retry 3
 
 echo "Building Jekyll site..."
