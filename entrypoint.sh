@@ -10,6 +10,7 @@ BUNDLE_BUILD__SASSC=--disable-march-tune-native
 echo "Installing gems..."
 
 bundle config path vendor/bundle
+sudo apt-get install pkg-config libxml2-dev libxslt-dev
 bundle install --jobs 4 --retry 3
 
 echo "Building Jekyll site..."
